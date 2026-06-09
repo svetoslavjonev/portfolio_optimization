@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portfolio-opt"
+version = "1.0.0"
+description = "Multi-asset portfolio optimisation across economic regimes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Your Name" }]
+keywords = ["portfolio-optimization", "quantitative-finance", "risk-parity", "hrp", "backtesting"]
+dependencies = [
+    "riskfolio-lib==7.3.0",
+    "numpy>=1.24,<3",
+    "pandas>=2.0",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "openpyxl>=3.1",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter>=1.0", "nbconvert>=7.0", "ipykernel>=6.0"]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[tool.setuptools]
+packages = ["portfolio_opt"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
